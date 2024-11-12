@@ -13,7 +13,7 @@ try:
         file_name = f'{date_time.year:04}' + '_' + f'{date_time.month:02}' + '_' \
             + f'{date_time.day:02}' + '_' + f'{date_time.hour:02}' + '_' \
             + f'{date_time.minute:02}' + '_' + f'{date_time.second:02}' + '_' \
-            + f'{date_time.month:07}' + '_' + sys.argv[2] + '.sql'
+            + f'{date_time.microsecond:07}' + '_' + sys.argv[2] + '.sql'
         f = open(MIGRATIONS_PATH + file_name, 'w')
         f.close()
         print("\nMigration " + file_name + " was created\n")
